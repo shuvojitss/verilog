@@ -7,8 +7,8 @@ module binary_to_bcd(
     output f0
     );
     assign f0=a[0];
-    assign f1=(a[3]&~a[2]&~a[1]);
-    assign f2=(a[3]&a[2])|(a[2]&a[1]);
-    assign f3=(~a[3]&a[1])|(a[3]&a[2]&~a[1]);
+    assign f1=(~a[3]&a[1])|(a[3]&a[2]&~a[1]);
+    assign f2=(~a[3]&a[2])|(a[2]&a[1]);
+    assign f3=(a[3]&~a[2]&~a[1]);
     assign f4=(a[3]&a[1])|(a[2]&a[3]);
 endmodule
